@@ -110,6 +110,15 @@
       "warehouseId": "w-1779974929409",
       "notes": "18 Unidades",
       "favorite": false
+    },
+    {
+      "id": "p-1780007320233",
+      "name": "Torta",
+      "barcode": "https://facturacionelectronica.tiendasd1.com/#/descargafactura/RzFBMy0yNzA2MDctMzk5MC0wMQ==",
+      "price": 3990,
+      "warehouseId": "w-1779974711227",
+      "notes": "",
+      "favorite": false
     }
   ],
   "warehouses": [
@@ -130,11 +139,11 @@
     {
       "id": "w-1780002731477",
       "name": "ISIMO",
-      "address": "LA 88",
+      "address": "La 88",
       "phone": "",
       "notes": ""
     }
   ],
   "theme": "dark",
-  "backupDate": "2026-05-28T22:23:03.550Z"
+  "backupDate": "2026-05-28T22:30:29.832Z"
 }
