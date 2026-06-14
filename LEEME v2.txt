@@ -1,0 +1,52 @@
+CyberHUD PWA — Lista de Compras
+================================
+
+PAQUETE (carpeta cyberhud/):
+- index.html
+- manifest.webmanifest
+- sw.js  (service worker, ahora con offline COMPLETO incl. CDN)
+- icon-192.png / icon-512.png / icon-maskable-512.png
+
+NOVEDADES DE ESTA VERSIÓN
+-------------------------
+1) El botón "Escanear Cámara" y "Nuevo Producto" ahora están ARRIBA del
+   listado de productos (panel izquierdo de "Lista Activa"), así siempre
+   son visibles aunque haya muchos productos.
+2) Service Worker v3: precachea Lucide, html5-qrcode, XLSX y Google Fonts.
+   Tras la PRIMERA carga con internet, la app funciona 100% sin conexión.
+
+INSTALACIÓN EN GITHUB PAGES (o cualquier hosting HTTPS)
+-------------------------------------------------------
+1. Sube los 6 archivos a la raíz del repositorio (o a una carpeta).
+2. Activa GitHub Pages: Settings → Pages → Source: main → /(root).
+3. Abre la URL HTTPS en el celular CON INTERNET la primera vez.
+4. Espera 5-10 segundos a que el Service Worker descargue todo.
+5. Instala la app:
+   - Android (Chrome): menú ⋮ → "Instalar app" / "Agregar a pantalla inicio".
+   - iPhone (Safari): Compartir → "Añadir a pantalla de inicio".
+   - PC (Chrome/Edge): icono ⬇ en la barra de direcciones.
+6. Permite el acceso a la cámara la primera vez que abras el escáner.
+
+ACTUALIZAR DESDE UNA VERSIÓN ANTERIOR
+-------------------------------------
+Si ya tenías instalada una versión vieja:
+ a) Desinstala la app del celular (mantén pulsado el icono → Eliminar).
+ b) En Chrome: ⋮ → Historial → Borrar datos de navegación → "Imágenes y
+    archivos en caché" del sitio (o usa Ajustes → Apps → Chrome → Almacenamiento
+    → Borrar caché).
+ c) Vuelve a abrir la URL HTTPS y reinstala.
+Esto fuerza al navegador a tomar el nuevo Service Worker (cyberhud-v3).
+
+USO OFFLINE
+-----------
+- Abre la app instalada SIN internet: cargará desde caché.
+- Todos tus datos (productos, listas, almacenes) se guardan en
+  localStorage del navegador, por lo que persisten sin conexión.
+- El escáner de cámara funciona offline (la cámara es local al dispositivo).
+
+PROBLEMAS COMUNES
+-----------------
+- "No carga la cámara" → la app DEBE abrirse vía HTTPS. file:// no sirve.
+- "Sigo viendo la versión vieja" → borra caché o desinstala/reinstala.
+- "No aparece el botón Instalar" → recarga 1-2 veces con internet para
+  que el navegador detecte el manifest y el SW.
