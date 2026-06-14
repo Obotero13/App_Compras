@@ -1,0 +1,61 @@
+# CyberHUD - PWA instalable (celular y PC)
+
+## Paso 1 - Subir a GitHub Pages (gratis, HTTPS)
+
+1. Entra a https://github.com y crea un repositorio nuevo, por ejemplo `cyberhud` (puede ser público).
+2. En el repo, pulsa "Add file" → "Upload files" y sube TODOS estos archivos juntos:
+   - index.html
+   - manifest.webmanifest
+   - sw.js
+   - icon-192.png
+   - icon-512.png
+   - icon-maskable-512.png
+3. Pulsa "Commit changes".
+4. Ve a Settings → Pages.
+5. En "Source" elige "Deploy from a branch" → branch `main` → carpeta `/ (root)` → Save.
+6. Espera 1-2 minutos. Aparecerá la URL: `https://TU-USUARIO.github.io/cyberhud/`
+
+## Paso 2 - Instalar en el CELULAR (Android)
+
+1. Abre la URL en **Chrome** (no en el WebView del correo ni Facebook).
+2. Toca el botón flotante **"⬇ Instalar App"** en la esquina inferior derecha,
+   o usa el menú ⋮ → **"Instalar aplicación"**.
+3. Confirma "Instalar". Aparecerá en el cajón de aplicaciones del celular
+   con su icono propio, como una app nativa.
+4. Ábrela desde el icono. La primera vez que toques el botón del **escáner**,
+   Android te preguntará "¿Permitir acceder a la cámara?" → toca **Permitir**.
+5. El permiso queda guardado para siempre.
+
+### Si NO aparece el botón "Instalar App"
+- Asegúrate de abrir la URL `https://...` (no `file://` ni el archivo descargado).
+- Asegúrate de usar Chrome/Edge actualizado.
+- Espera unos segundos en la página (Chrome valida el manifest + service worker).
+- Recarga la pestaña una vez.
+
+### Si ya tenías la versión vieja "agregada a inicio"
+1. Mantén pulsado el icono viejo en el escritorio → **Quitar / Desinstalar**.
+2. En Chrome: menú ⋮ → Configuración → Privacidad → **Borrar datos de navegación** del sitio (o sólo Caché de imágenes y archivos).
+3. Abre de nuevo la URL e instala con el botón ⬇.
+
+## Paso 3 - Instalar en el CELULAR (iPhone / iPad)
+
+1. Abre la URL en **Safari** (obligatorio, no funciona en Chrome iOS).
+2. Toca el botón **Compartir** (cuadrado con flecha hacia arriba).
+3. Desplázate y elige **"Agregar a inicio"** → "Agregar".
+4. Abre desde el icono. En el primer uso del escáner, Safari pedirá
+   permiso de cámara → **Permitir**.
+
+## Paso 4 - Instalar en el PC (Windows / Mac / Linux)
+
+1. Abre la URL en **Chrome**, **Edge** o **Brave**.
+2. En la barra de direcciones, a la derecha, aparece un icono de
+   instalación (monitor con flecha hacia abajo) — pulsa **Instalar**.
+   También funciona: menú ⋮ → "Instalar Lista de Compras CyberHUD…".
+3. Aparecerá en el menú Inicio / Aplicaciones como app de escritorio.
+
+## Solución de problemas con la cámara
+
+- **"Permiso denegado"**: ve a Ajustes del celular → Aplicaciones → CyberHUD → Permisos → Cámara → Permitir.
+  Si la instalaste como acceso directo (no PWA real), desinstala y reinstala usando el botón ⬇ Instalar App.
+- **"No se encontró cámara"**: tu dispositivo no tiene cámara trasera; el código ahora intenta automáticamente la frontal.
+- **"Cámara en uso"**: cierra WhatsApp, Instagram u otra app que esté usando la cámara.
